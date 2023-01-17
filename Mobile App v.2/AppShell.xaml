@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Mobile_App_v._2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Mobile_App_v._2"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <ShellContent
+ Title="My Shopping Lists"
+ ContentTemplate="{DataTemplate local:ListEntryPage}"
+ />
+
+        <ShellContent
+            Title="My Reviews"
+            ContentTemplate="{DataTemplate local:ReviewListPage}"
+        />
+        <ShellContent
+            Title="My Doctors"
+            ContentTemplate="{DataTemplate local:DoctorsListPage}"
+        />
+    </TabBar>
+</Shell>
+

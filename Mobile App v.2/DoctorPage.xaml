@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile_App_v._2.DoctorPage"
+             Title="DoctorPage">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Editor Placeholder="Enter Name" Margin="20"
+                    Text="{Binding Name}"
+                                HeightRequest="50" />
+            <Editor Placeholder="Enter Age" Margin="20"
+                    Text="{Binding Age}"
+                                HeightRequest="50" />
+
+            <Picker x:Name="picker"
+                Title="Select a function" Margin="20">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Cardiologist</x:String>
+                        <x:String>Surgen</x:String>
+                        <x:String>Urologist</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <Button Text="Save Doctor" MaximumWidthRequest="200"
+                        Clicked="OnSaveButtonClicked" Margin="20" />
+            <Button Text="Delete Doctor" MaximumWidthRequest="200"
+                        Clicked="OnDeleteButtonClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

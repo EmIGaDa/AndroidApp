@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile_App_v._2.ReviewListPage"
+             Title="ReviewListPage">
+    <StackLayout Margin="20">
+        <ListView Grid.Row="1" Grid.Column="0" x:Name="listView"
+                          Margin="20" IsRefreshing="True" ItemSelected="OnListViewItemSelected"> >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Description}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Grid.Column="1"
+                Text="Add new Review"
+                Clicked="OnAddButtonClicked"/>
+    </StackLayout>
+</ContentPage>
